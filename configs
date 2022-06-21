@@ -1,0 +1,34 @@
+ul
+  margin: 0;
+    background-color: #DCD6DA;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    border-bottom: 1px solid black;
+li{
+    background-color: #DCD6DA;
+    color: black;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    height: 25%;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+        width: 100%;
+}
+
+<img src="kuromi.png" style="width: 130%; height: 130%;" >
+<img src="helloCute.png" style="width: 30%; height: 60%;">
+       <img src="trans.png" alt="teste" class="headimage">   
+
+<div style="display: flex; justify-content: center; align-items: center; align-self: center; width: 100%; gap: 40px;">
+        <img src="hellonurse2.png" style="width:22%; height: 70%;"> 
+    <img src="pinkieneedle.png" style="width:25%; height: 80%;"> 
+    <img src="hellonurse2.png" style="width:22%; height: 70%;"> 
+    </div>
+
