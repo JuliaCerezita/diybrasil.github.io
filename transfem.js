@@ -4,8 +4,8 @@ let height = window.screen.availHeight;
 console.log("The height is" + height);
 console.log(width);
 
-if((width >= 820 && height < 820 || width < 820 && height >= 820) || (width < 820 && height < 820)){
-if(width < 820){
+if((width >= 750 && height < 750 || width < 750 && height >= 750) || (width < 750 && height < 750)){
+if(width < 750){
     const kuromi = document.querySelector('#kuromi');
     const kuromicontainer = document.querySelector("#kuromicontainer");
     kuromicontainer.removeChild(kuromi);
@@ -13,6 +13,30 @@ if(width < 820){
     nav.removeChild(kuromicontainer);
     const transflag = document.querySelector('#transflag');
     nav.removeChild(transflag);
+    const navul = document.querySelectorAll('.navul');
+    for(const i of navul){
+        nav.removeChild(i);
+    };
+    const navul2 = document.createElement('ul');
+    navul2.classList.add("navul");
+    const sobre = document.createElement('li');
+    sobre.classList.add("navli");
+    sobre.classList.add("sobre");
+    const recursos = document.createElement('li');
+    recursos.classList.add("navli");
+    const contato = document.createElement('li');
+    contato.classList.add("navli");
+    const aplicacao = document.createElement('li');
+    aplicacao.classList.add("navli");
+    recursos.textContent = "Recursos";
+    sobre.textContent = "Sobre";
+    contato.textContent = "Contato";
+    aplicacao.textContent = "Aplicação";
+    nav.appendChild(navul2);
+    navul2.appendChild(sobre);
+    navul2.appendChild(recursos);
+    navul2.appendChild(contato);
+    navul2.appendChild(aplicacao);
 };
 
 screen.orientation.onchange = change;
@@ -22,7 +46,7 @@ function change(e){
 let height = window.screen.availHeight;
     console.log("The width is" + width);
     console.log(height);
-    if(width < 820){
+    if(width < 750){
         /* Apply the transformation from landscape to portrait */
         const kuromi = document.querySelector('#kuromi');
     const kuromicontainer = document.querySelector("#kuromicontainer");
@@ -31,6 +55,30 @@ let height = window.screen.availHeight;
     nav.removeChild(kuromicontainer);
     const transflag = document.querySelector('#transflag');
     nav.removeChild(transflag);
+    const navul = document.querySelectorAll('.navul');
+    for(const i of navul){
+        nav.removeChild(i);
+    };
+    const navul2 = document.createElement('ul');
+    navul2.classList.add("navul");
+    const sobre = document.createElement('li');
+    sobre.classList.add("navli");
+    sobre.classList.add("sobre");
+    const recursos = document.createElement('li');
+    recursos.classList.add("navli");
+    const contato = document.createElement('li');
+    contato.classList.add("navli");
+    const aplicacao = document.createElement('li');
+    aplicacao.classList.add("navli");
+    recursos.textContent = "Recursos";
+    sobre.textContent = "Sobre";
+    contato.textContent = "Contato";
+    aplicacao.textContent = "Aplicação";
+    nav.appendChild(navul2);
+    navul2.appendChild(sobre);
+    navul2.appendChild(recursos);
+    navul2.appendChild(contato);
+    navul2.appendChild(aplicacao);
     }
     else{
         /* Apply the transformation from portrait to landscape */
@@ -50,6 +98,45 @@ let height = window.screen.availHeight;
         transflag.setAttribute('id', "transflag");
         nav.appendChild(transflag);
         transflag.appendChild(transflagimg);
+        const navul2 = document.querySelector('.navul');
+        nav.removeChild(navul2);
+        const navul0 = document.createElement('ul');
+        const sobre = document.createElement('li');
+        sobre.classList.add("navli");
+        sobre.classList.add("sobre");
+        const sobrea = document.createElement('a');
+        sobrea.href = "index.html";
+        sobre.appendChild(sobrea);
+        const recursos = document.createElement('li');
+        recursos.classList.add("navli");
+        const recursosa = document.createElement('a');
+        recursosa.href = "recursos.html";
+        recursos.appendChild(recursosa);
+        navul0.appendChild(sobre);
+        navul0.appendChild(recursos);
+        const navul1 = document.createElement('ul');
+        const contato = document.createElement('li');
+        contato.classList.add("navli");
+        contato.classList.add("sobre");
+        const contatoa = document.createElement('a');
+        contatoa.href = "contato.html"
+        contato.appendChild(contatoa);
+        const aplicacao = document.createElement('li');
+        aplicacao.classList.add("navli");
+        const aplicacaoa = document.createElement('a');
+        aplicacaoa.href = "autoaplicaçao.html";
+        aplicacao.appendChild(aplicacaoa);
+        navul1.appendChild(contato);
+        navul1.appendChild(aplicacao);
+        nav.insertBefore(navul0, transflag);
+        nav.insertBefore(navul1, transflag);
+        recursosa.textContent = "Recursos";
+        sobrea.textContent = "Sobre";
+        contatoa.textContent = "Contato";
+        aplicacaoa.textContent = "Aplicação";
+        navul0.classList.add("navul");
+        navul1.classList.add("navul");
+
     };
 }
 }
